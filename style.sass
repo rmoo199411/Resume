@@ -1,0 +1,262 @@
+$Web-words: #484848
+$Web-padding: 50px
+$Iner-padding: 30px
+$Iner-title: 25px
+$Iner-title-pt: 10px
+$Iner-color: #07748c
+$Iner-words: 18px
+
+@mixin center()
+    display: flex
+    justify-content: center
+    align-items: center 
+
+@mixin Iner-title()
+        color: $Iner-color
+        font-size: $Iner-title
+        font-weight: 800
+        color: $Iner-color
+    
+    
+
+*
+    margin: 0
+    padding: 0
+    list-style: none
+    font-family: Georgia, fantasy, serif,
+    box-sizing: border-box
+    color: $Web-words
+    font-size: $Iner-words
+    line-height: 25px
+a
+    text-decoration: none
+
+.header
+    width: 100%
+    padding: $Web-padding  $Web-padding 0 $Web-padding
+    display: flex
+    @media ( max-width: 660px )
+        flex-direction: column
+        padding: 0
+        
+
+    .header-l
+        width: 500px
+        padding: $Iner-padding
+        @media ( max-width: 900px )
+            width: 100%
+            text-align: center
+
+        .title
+            font-size: 30px
+            font-weight: 900
+            color: $Iner-color
+            margin-top: 20px
+
+        img 
+            width: 200px
+            height: 200px
+            border-radius: 50%
+
+        .contect
+            font-size: 20px
+            margin-top: 20px
+
+            i
+                color: #000000
+                padding-right: 10px
+                margin-top: 20px
+
+                 
+        .socail
+            display: flex
+
+            @media ( max-width: 900px )
+                width: 100%
+                display: flex
+                justify-content: center
+
+            i
+                padding-right: 20px
+                font-size: 40px
+                margin: 0 
+                margin-top: 20px
+
+                @media ( max-width: 900px )
+                    padding: 0 20px
+
+    .header-r
+        padding: $Iner-padding
+        width: 100%
+
+        .header-r-title
+            @include Iner-title()
+            padding-bottom: $Iner-title-pt
+
+        .header-r-main
+            margin-bottom: 20px
+                
+        .skills
+                padding-top: 20px 
+                font-weight: 800  
+
+                .skills-title
+                    @include Iner-title()
+                    padding-bottom: $Iner-title-pt
+
+                i   
+                    padding-bottom: 10px
+                    padding-right: 5px
+                    font-size: 25px
+
+.page-nav
+    @include center()
+    width: 100%
+    background-color: #bcb8b8
+
+    a
+        padding: 20px
+        @include Iner-title()
+
+    .selected
+        color: #904c04
+    
+
+.about
+    padding: 0 80px
+    @media ( max-width: 600px )
+        padding: 0 30px
+
+    .section
+        margin-top: 50px
+        
+        .introduct-title
+            @include Iner-title()
+            padding-bottom: $Iner-title-pt
+
+        .introduct-main
+            padding-bottom: $Iner-title-pt
+            padding-left: 20px
+            
+
+        .works
+            padding: 0px 0 40px 20px
+            @media ( max-width: 600px )
+                padding: 0px 0 20px 20px    
+
+            .com-name
+                font-size: 22px
+                font-weight: 800
+
+            .com-time
+                padding: 10px 40px
+                @media ( max-width: 600px )
+                    padding: 10px 10px
+
+                span
+                    font-weight: 700
+
+            ul
+                padding: 10px 40px
+                font-weight: 700
+                @media ( max-width: 600px )
+                    padding: 10px 10px
+
+                li
+                    padding-left: 40px
+                    font-size: $Web-words
+                    font-weight: 500
+                    @media ( max-width: 600px )
+                    padding-left: 20px
+
+.line
+    background-color: $Web-words
+    height: 1px
+    width: 100%
+    margin-top: 20px
+
+.footer
+    height: 200px
+    width: 100%
+    margin-top: 80px
+    background-color: #aca6a6
+    text-align: center
+    letter-spacing: 3px
+    @include center()
+    @include Iner-title()
+    
+    
+// 作品欄
+
+.list
+    display: flex
+    flex-direction: column
+    padding-top: 50px
+    @include center()
+
+    .projects
+        display: flex
+        width: 80%
+        justify-content: space-around
+        align-items: center
+        padding-bottom: 50px
+
+        @media ( max-width: 900px )
+            flex-direction: column
+            width: 100%
+            border-bottom: 1px solid #747272
+            margin-bottom: 20px
+            
+
+
+        .pic
+            width: 40%
+            @media ( max-width: 900px )
+                width: 100%
+
+            img
+                width: 100%
+                border-radius: 20px
+                transition: filter 1.5s ease, box-shadow 1s ease
+                @media ( max-width: 900px )
+                    border-radius: 0
+
+                &:hover
+                    filter: brightness(130%) 
+                    box-shadow: -10px 10px 10px 10px #6b69699d
+
+    .list-main
+        width: 40%
+        height: 100%
+        @media ( max-width: 900px )
+            width: 100%
+
+        .dir
+            font-weight: 800
+
+        .list-title
+            @include Iner-title()
+            margin-bottom: 20px
+            margin-top: 20px
+
+        .list-content
+            margin-left: 20px
+            margin-bottom: 20px
+
+    .features
+        display: flex
+        flex-wrap: wrap
+
+        .feature
+            margin-right: 10px
+            margin-bottom: 10px
+            padding: 10px
+            background-color: #cecfcc
+            border-radius: 30px
+
+
+
+        
+            
+
+    
